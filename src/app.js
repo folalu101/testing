@@ -7,7 +7,17 @@ set = () =>{
 
     // for loop
     for ( let i = 0; i < element.length; i++){
-        console.log(element[i].value);
+
+        // showproprty and vale 
+        let cssProperty = element[i].getAttribute('id');
+
+        let cssValue = element[i].value;
+
+        // modify div
+        let div = document.getElementById('modify');
+        div.style[cssProperty] = cssValue;
+
+        console.log(cssProperty, cssValue);
     }
 };
 
